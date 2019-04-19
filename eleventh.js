@@ -1,5 +1,5 @@
 function all(pr1,pr2){
-    return new Promise(function(resolve,reject){
+    return new Promise((resolve,reject) => {
         let counter = 0;
         let result = [];
         pr1.then(function(count){

@@ -6,5 +6,5 @@ var promise = new Promise(function (fulfill, reject) {
     console.log(error.message);
   }
   
-  promise.then(function(){console.log('a')},(message)=>onReject(message));
+  promise.then(() => {console.log('a')},(message)=>onReject(message));
   // Your solution here
