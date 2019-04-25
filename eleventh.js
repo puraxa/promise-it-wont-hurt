@@ -1,4 +1,4 @@
-function all(pr1,pr2){
+let all = (pr1,pr2) => {
     return new Promise((resolve,reject) => {
         let counter = 0;
         let result = [];
@@ -8,7 +8,7 @@ function all(pr1,pr2){
             if(counter>=2){
                 resolve(result);
             }
-        })
+        });
         pr2.then(function(count){
             result[1] = count;
             counter++;
@@ -16,7 +16,7 @@ function all(pr1,pr2){
                 resolve(result);
             }
         })
-    })
+    });
 }
 
 all(getPromise1(),getPromise2()).then(console.log);

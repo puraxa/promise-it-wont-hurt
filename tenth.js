@@ -1,14 +1,14 @@
-function alwaysThrows(){
+let alwaysThrows = () => {
     throw new Error('OH NOES');
 }
 
-function iterate(a){
+let iterate = (a) => {
     console.log(a);
     a++;
     return a;
 }
 
-function onReject(error){
+let onReject = (error) => {
     console.log(error.message);
 }
 

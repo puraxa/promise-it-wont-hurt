@@ -1,7 +1,5 @@
 let firstPromise = first();
 
-let secondPromise = firstPromise.then((nesto) => {
-    return second(nesto);
-});
+let secondPromise = firstPromise.then((nesto) => second(nesto));
 
-secondPromise.then(console.log);
+secondPromise.then(console.log).catch();

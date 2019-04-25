@@ -3,8 +3,10 @@ let promise = new Promise((resolve,reject) => {
     reject(new Error('I DID NOT FIRE'));
 });
 
-function onReject(error){
+let onReject = (error) => {
     console.log(error.message);
 }
 
 promise.then((message)=>console.log(message), onReject);
+
+// kad stavim catch verify ne radi

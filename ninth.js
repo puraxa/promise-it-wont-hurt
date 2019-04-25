@@ -1,4 +1,4 @@
-function parsePromise (json){
+let parsePromise = (json) => {
     return new Promise((resolve, reject) => {
         try{
             resolve(JSON.parse(json));
@@ -9,8 +9,8 @@ function parsePromise (json){
     });
 }
 
-function onReject(error){
+let onReject = (error) => {
     console.log(error.message);
 }
 
-parsePromise(process.argv[2]).then(null, onReject);
+parsePromise(process.argv[2]).then(null, onReject).catch();
